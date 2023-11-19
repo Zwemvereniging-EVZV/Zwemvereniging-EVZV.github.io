@@ -30,8 +30,8 @@ document.addEventListener("DOMContentLoaded", function () {
             { text: "Het Team", link: "/algemene-info/het-team" },
             { text: "Help Ons", link: "/algemene-info/help-ons" },
         ]},
-        { text: "Agenda", link: "/" },
-        { text: "Contact", link: "/" },
+        { text: "Agenda", link: "/agenda" },
+        { text: "Contact", link: "/contact" },
         { text: "Inschrijven", link: "https://mijn.membro.nl/aanmelden/evzv" }
     ];
 
