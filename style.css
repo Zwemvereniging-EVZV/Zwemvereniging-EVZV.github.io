@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
 body {
     margin: 0 auto;
-    width: 90%;
+    margin-left: 27%;
+    width: 71%;
     transition: 0.5s;
     scroll-behavior: smooth;
     position: relative;
     font-family: Lexend, Arial, sans-serif;
     overflow-x: hidden;
     background-color: white;
+    font-size: 18px;
 }
 
 h1 {
