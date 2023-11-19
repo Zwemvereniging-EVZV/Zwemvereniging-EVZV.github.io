@@ -26,6 +26,10 @@ h3 {
     color: #3042e1;
 }
 
+a {
+    color: #162dff;  
+}
+
 #navbar a, .submenu a {
     size: 20px;
     border-radius: 5px;
