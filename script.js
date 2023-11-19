@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     topBar.style.display = "flex";
     topBar.style.alignItems = "center";
     topBar.style.padding = "0 20px";
-    navbar.style.flexWrap = "wrap";
+    topBar.style.flexWrap = "wrap";
 
     function openLink(link) {
         window.location.href = link;
