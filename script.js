@@ -27,19 +27,19 @@ document.addEventListener("DOMContentLoaded", function () {
     openButton.style.cursor = "pointer";
 
     function adjustOpenButtonPosition() {
-        if (sideBar.style.width === "250px") {
-            openButton.style.left = "260px"; // 270px vanaf de linkerkant als de sideBar zichtbaar is
+        if (sideBar.style.width === "325px") {
+            openButton.style.left = "330px"; // 270px vanaf de linkerkant als de sideBar zichtbaar is
         } else {
             openButton.style.left = "10px"; // 20px vanaf de linkerkant als de sideBar niet zichtbaar is
         }
     }
     
     openButton.addEventListener("click", function () {
-        if (sideBar.style.width === "250px") {
+        if (sideBar.style.width === "325px") {
             sideBar.style.width = "0";
             openButton.style.transition = "left 0.5s ease"; // Voeg een overgang toe aan de left-eigenschap
         } else {
-            sideBar.style.width = "250px";
+            sideBar.style.width = "325px";
             openButton.style.transition = "left 0.5s ease"; // Voeg een overgang toe aan de left-eigenschap
         }
         adjustOpenButtonPosition(); // Pas de positie van de openButton aan bij het openen/sluiten van de sideBar
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
         
             button.addEventListener("mouseover", function () {
                 submenu.style.display = "block";
-                submenu.style.left = "25px";
+                submenu.style.left = "100px";
                 submenu.style.width = "200px";
                 submenu.style.transform = "translateY(10px)";
                 submenu.style.wordWrap = "break-word";
