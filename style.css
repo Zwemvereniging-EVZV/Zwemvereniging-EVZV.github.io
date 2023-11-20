@@ -30,6 +30,10 @@ a {
     color: #162dff;  
 }
 
+img {
+    border-radius: 15px;
+}
+
 #navbar a, .submenu a {
     size: 20px;
     border-radius: 5px;
