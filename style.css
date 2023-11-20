@@ -76,3 +76,20 @@ a {
 .submenuItem {
     display: block;
 }
+
+@media (max-width: 700px) {
+    #info table {
+        width: 90%;
+    }
+
+    #info td {
+        width: 90%;
+        display: block;
+        margin-bottom: 10px; /* voeg wat ruimte toe tussen de gestapelde tabellen */
+    }
+
+    #maps {
+        width: 100%;
+        display: block;
+    }
+}
