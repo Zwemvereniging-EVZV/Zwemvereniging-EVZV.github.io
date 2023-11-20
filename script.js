@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
             { text: "Snorkelen", link: "/zwemles/snorkelen" },
             { text: "Trimzwemmen", link: "/zwemles/trimzwemmen" }
         ]},
-        { text: "Algemene Info", submenu: [
+        { text: "Info", submenu: [
             { text: "Locate/Tijden", link: "/algemene-info/locatie-tijden" },
             { text: "Prijzen", link: "/algemene-info/prijzen" },
             { text: "Overganseisen", link: "/algemene-info/overgangseisen" },
