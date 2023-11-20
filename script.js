@@ -13,8 +13,10 @@ document.addEventListener("DOMContentLoaded", function () {
     sideBar.style.transition = "0.5s";
 
     var openButton = document.createElement("button");
-    openButton.textContent = "☰ Navigatie";
+    openButton.textContent = "☰";
     openButton.style.position = "fixed";
+    openButton.style.fontFamily = "Lexend";
+    openButton.style.fontSize = "30px";
     openButton.style.top = "10px";
     openButton.style.borderRadius = "20px";
     openButton.style.left = "10px";
@@ -54,13 +56,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // Voeg bestaande knoppen met submenu's toe aan de zijbalk
     var buttons = [
         { text: "Home", link: "/" },
-        { text: "Zwemles", submenu: [
+        { text: "Zwemles (4)", submenu: [
             { text: "ABC-Zwemmen", link: "/zwemles/abc-zwemmen" },
             { text: "Zwemvaardigheid", link: "/zwemles/zwemvaardigheid" },
             { text: "Snorkelen", link: "/zwemles/snorkelen" },
             { text: "Trimzwemmen", link: "/zwemles/trimzwemmen" }
         ]},
-        { text: "Info", submenu: [
+        { text: "Info (8)", submenu: [
             { text: "Locate/Tijden", link: "/algemene-info/locatie-tijden" },
             { text: "Prijzen", link: "/algemene-info/prijzen" },
             { text: "Overganseisen", link: "/algemene-info/overgangseisen" },
