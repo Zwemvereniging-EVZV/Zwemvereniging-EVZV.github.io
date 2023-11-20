@@ -1,18 +1,57 @@
 document.addEventListener("DOMContentLoaded", function () {
-    var topBar = document.createElement("div");
-    topBar.id = "navbar";
-    topBar.style.backgroundColor = "#192bd1";
-    topBar.style.color = "#fff";
-    topBar.style.minHeight = "70px";
-    topBar.style.display = "flex";
-    topBar.style.alignItems = "center";
-    topBar.style.padding = "0 20px";
-    topBar.style.flexWrap = "wrap";
+    var sideBar = document.createElement("div");
+    sideBar.id = "sidebar";
+    sideBar.style.backgroundColor = "#192bd1";
+    sideBar.style.color = "#fff";
+    sideBar.style.width = "0";
+    sideBar.style.height = "100%";
+    sideBar.style.position = "fixed";
+    sideBar.style.top = "0";
+    sideBar.style.left = "0";
+    sideBar.style.zIndex = "9998";
+    sideBar.style.overflowX = "hidden";
+    sideBar.style.transition = "0.5s";
 
-    function openLink(link) {
-        window.location.href = link;
+    var openButton = document.createElement("button");
+    openButton.textContent = "☰ Navigatie";
+    openButton.style.position = "fixed";
+    openButton.style.top = "10px";
+    openButton.style.borderRadius = "20px";
+    openButton.style.left = "10px";
+    openButton.style.zIndex = "9999";
+    openButton.style.backgroundColor = "white";
+    openButton.style.color = "#black";
+    openButton.style.border = "black solid 1px";
+    openButton.style.cursor = "pointer";
+
+    function adjustOpenButtonPosition() {
+        if (sideBar.style.width === "250px") {
+            openButton.style.left = "260px"; // 270px vanaf de linkerkant als de sideBar zichtbaar is
+        } else {
+            openButton.style.left = "10px"; // 20px vanaf de linkerkant als de sideBar niet zichtbaar is
+        }
     }
+    
+    openButton.addEventListener("click", function () {
+        if (sideBar.style.width === "250px") {
+            sideBar.style.width = "0";
+            openButton.style.transition = "left 0.5s ease"; // Voeg een overgang toe aan de left-eigenschap
+        } else {
+            sideBar.style.width = "250px";
+            openButton.style.transition = "left 0.5s ease"; // Voeg een overgang toe aan de left-eigenschap
+        }
+        adjustOpenButtonPosition(); // Pas de positie van de openButton aan bij het openen/sluiten van de sideBar
+    });
+    
+    // Voeg een event listener toe om de overgang te resetten wanneer deze is voltooid
+    openButton.addEventListener("transitionend", function () {
+        openButton.style.transition = ""; // Reset de overgang
+    });
 
+    document.body.appendChild(openButton);
+    document.body.appendChild(sideBar);
+
+    // Voeg bestaande knoppen met submenu's toe aan de zijbalk
     var buttons = [
         { text: "Home", link: "/" },
         { text: "Zwemles", submenu: [
@@ -38,11 +77,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     buttons.forEach(function (buttonInfo) {
         var button = document.createElement("a");
-        button.className = "navbarButton";
-        button.style.marginRight = "10px";
-        button.style.cursor = "pointer";
+        button.className = "sidebarButton";
+        button.style.display = "block";
+        button.style.padding = "10px";
+        button.style.textDecoration = "none";
+        button.style.color = "#fff";
         button.textContent = buttonInfo.text;
-
+    
         if (buttonInfo.link) {
             button.href = buttonInfo.link;
             button.addEventListener("click", function (event) {
@@ -54,15 +95,15 @@ document.addEventListener("DOMContentLoaded", function () {
             var submenu = document.createElement("div");
             submenu.className = "submenu";
             button.appendChild(submenu);
-
+        
             button.addEventListener("mouseover", function () {
                 submenu.style.display = "block";
             });
-
+        
             button.addEventListener("mouseout", function () {
                 submenu.style.display = "none";
             });
-
+        
             buttonInfo.submenu.forEach(function (submenuItem) {
                 var submenuLink = document.createElement("a");
                 submenuLink.textContent = submenuItem.text;
@@ -71,9 +112,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 submenu.appendChild(submenuLink);
             });
         }
-
-        topBar.appendChild(button);
+    
+        sideBar.appendChild(button);
     });
 
-    document.body.insertBefore(topBar, document.body.firstChild);
+    function openLink(link) {
+        window.location.href = link;
+    }
 });
