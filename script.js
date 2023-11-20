@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     openButton.style.left = "10px";
     openButton.style.zIndex = "9999";
     openButton.style.backgroundColor = "white";
-    openButton.style.color = "#black";
+    openButton.style.color = "black";
     openButton.style.border = "black solid 1px";
     openButton.style.cursor = "pointer";
 
@@ -109,6 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
             buttonInfo.submenu.forEach(function (submenuItem) {
                 var submenuLink = document.createElement("a");
                 submenuLink.textContent = submenuItem.text;
+                submenuLink.style.left = "150px";
                 submenuLink.href = submenuItem.link;
                 submenuLink.className = "submenuItem";
                 submenu.appendChild(submenuLink);
