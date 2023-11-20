@@ -81,6 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var button = document.createElement("a");
         button.className = "sidebarButton";
         button.style.display = "block";
+        button.style.cursor = "pointer";
         button.style.padding = "10px";
         button.style.textDecoration = "none";
         button.style.color = "#fff";
@@ -100,6 +101,10 @@ document.addEventListener("DOMContentLoaded", function () {
         
             button.addEventListener("mouseover", function () {
                 submenu.style.display = "block";
+                submenu.style.left = "25px";
+                submenu.style.width = "200px";
+                submenu.style.transform = "translateY(10px)";
+                submenu.style.wordWrap = "break-word";
             });
         
             button.addEventListener("mouseout", function () {
@@ -109,7 +114,6 @@ document.addEventListener("DOMContentLoaded", function () {
             buttonInfo.submenu.forEach(function (submenuItem) {
                 var submenuLink = document.createElement("a");
                 submenuLink.textContent = submenuItem.text;
-                submenuLink.style.left = "150px";
                 submenuLink.href = submenuItem.link;
                 submenuLink.className = "submenuItem";
                 submenu.appendChild(submenuLink);
