@@ -6,10 +6,24 @@
     <title>Pagina Niet Gevonden - 404</title>
     <link rel="stylesheet" href="/style.css">
     <script src="/script.js"></script>
+    
+    <style>
+        #img-404 {
+            width: 640px;
+            margin-top: 20px;
+            margin-bottom: -20px;
+        }
+
+        @media (max-width: 710px) {
+            #img-404 {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <img src="/assets/404.jpg" alt="404 Afbeelding" width="1280">
+    <img id="img-404" src="/assets/404.jpg" alt="404 Afbeelding" >
     <h1>Oeps, deze pagina is niet gevonden!</h1>
-    <p style="margin-top: 50px">Check de URL of ga naar de <a href="/">startpagina</a>.</p>
+    <p style="margin-top: 30px">Check de URL of ga naar de <a href="/">startpagina</a>.</p>
 </body>
 </html>
