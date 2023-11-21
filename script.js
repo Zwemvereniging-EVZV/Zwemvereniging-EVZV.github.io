@@ -89,6 +89,7 @@ function sideMenuNav() {
         var button = document.createElement("a");
         button.className = "sidebarButton";
         button.style.display = "block";
+        button.style.borderBottomColor = "black";
         button.style.cursor = "pointer";
         button.style.padding = "10px";
         button.style.textDecoration = "none";
