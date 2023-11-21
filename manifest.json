@@ -4,8 +4,8 @@
     "start_url": "/",
     "description": "Dit is de EVZV website. Gemaakt door Tamer Çevik.",
     "display": "standalone",
-    "background_color": "var(--background-color)",
-    "theme_color": "var(--h1234-color)",
+    "background_color": "white",
+    "theme_color": "blue",
     "icons": [
       {
         "src": "/favicon.ico",
