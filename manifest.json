@@ -1,8 +1,8 @@
 {
-    "name": "TC_tam Website",
-    "short_name": "TC_tam",
+    "name": "EVZV Website",
+    "short_name": "EVZV",
     "start_url": "/",
-    "description": "Dit is de TC_tam website! Door Tamer Çevik.",
+    "description": "Dit is de EVZV website. Gemaakt door Tamer Çevik.",
     "display": "standalone",
     "background_color": "var(--background-color)",
     "theme_color": "var(--h1234-color)",
