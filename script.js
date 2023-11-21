@@ -264,3 +264,19 @@ document.addEventListener("DOMContentLoaded", function () {
     // Append the footer to the body of the document
     document.body.appendChild(footer);
 });
+
+/* google analytics */
+(function() {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-YNJ44R3VZ9';
+  
+    var firstScript = document.getElementsByTagName('script')[0];
+    firstScript.parentNode.insertBefore(script, firstScript);
+  
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-YNJ44R3VZ9');
+  })();
