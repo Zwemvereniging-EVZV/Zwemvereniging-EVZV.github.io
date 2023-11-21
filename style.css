@@ -154,4 +154,8 @@ footer img {
         margin-bottom: 10px; /* Optional: add some space between image and text */
         margin-right: 0; /* Reset margin-right for smaller screens */
     }
+
+    footer p {
+        margin-left: 0;
+    }
 }
