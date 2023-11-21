@@ -210,3 +210,15 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(displayImages, 3000); 
     }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const facebookIcon = document.createElement("img");
+    facebookIcon.src = "https://www.facebook.com/images/fb_icon_325x325.png";
+    facebookIcon.alt = "Facebook Icon";
+    facebookIcon.id = "facebookIcon";
+    facebookIcon.addEventListener("click", function() {
+        window.open("https://www.facebook.com/EersteVoorschotenseZwemvereniging/?fref=ts");
+    });
+
+    document.body.appendChild(facebookIcon);
+});
