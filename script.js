@@ -240,3 +240,27 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.body.appendChild(facebookIcon);
 });
+
+// JavaScript code to add a footer to the page
+document.addEventListener("DOMContentLoaded", function () {
+    // Create footer element
+    var footer = document.createElement("footer");
+
+    // Create image element
+    var image = document.createElement("img");
+    image.src = "/assets/logo.png";
+    image.alt = "EVZV Logo";
+
+    // Create paragraph element for the copyright text
+    var copyrightText = document.createElement("p");
+    copyrightText.textContent = "Copyright© 2023-2023 EVZV - Tamer Çevik";
+    copyrightText.style.marginLeft = "15px"
+    copyrightText.style.fontSize = "15px"
+
+    // Append image and text to the footer
+    footer.appendChild(image);
+    footer.appendChild(copyrightText);
+
+    // Append the footer to the body of the document
+    document.body.appendChild(footer);
+});

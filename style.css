@@ -129,3 +129,29 @@ img {
     top: 10px;
     right: 10px;
 }
+
+/* CSS styling to arrange image and text side by side */
+footer {
+    display: flex;
+    align-items: baseline;
+    padding: 5px;
+}
+
+footer img {
+    max-width: 150px; /* Adjust the maximum width of the image as needed */
+    margin-right: 10px; /* Optional: add some space between image and text */
+    margin-bottom: -300px; /* Optional: add some space between image and text */
+}
+
+@media (max-width: 600px) {
+    footer {
+        flex-direction: column; /* Change to column layout on small screens */
+        align-items: center; /* Center items in the column */
+    }
+    
+    footer img {
+        max-width: 100%; /* Set image width to 100% on small screens */
+        margin-bottom: 10px; /* Optional: add some space between image and text */
+        margin-right: 0; /* Reset margin-right for smaller screens */
+    }
+}
