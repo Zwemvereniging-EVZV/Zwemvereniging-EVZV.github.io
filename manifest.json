@@ -1,0 +1,25 @@
+{
+    "name": "TC_tam Website",
+    "short_name": "TC_tam",
+    "start_url": "/",
+    "description": "Dit is de TC_tam website! Door Tamer Çevik.",
+    "display": "standalone",
+    "background_color": "var(--background-color)",
+    "theme_color": "var(--h1234-color)",
+    "icons": [
+      {
+        "src": "/favicon.ico",
+        "type": "image/x-icon",
+        "sizes": "128x128"
+      }, {
+        "src": "/favicon.ico",
+        "type": "image/x-icon",
+        "sizes": "256x256"
+      }, {
+        "src": "/favicon.ico",
+        "type": "image/x-icon",
+        "sizes": "512x512"
+      }
+    ]
+  }
+    
