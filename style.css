@@ -144,7 +144,7 @@ footer {
 }
 
 #evzv-header {
-    max-width: 263px; /* Adjust the maximum width of the image as needed */
+    max-height: 120px; /* Adjust the maximum width of the image as needed */
     margin-right: 10px; /* Optional: add some space between image and text */
     margin-bottom: 0px; /* Optional: add some space between image and text */
 }
