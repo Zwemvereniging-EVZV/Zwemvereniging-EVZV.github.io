@@ -250,11 +250,13 @@ document.addEventListener("DOMContentLoaded", function () {
     var image = document.createElement("img");
     image.src = "/assets/logo.png";
     image.alt = "EVZV Logo";
+    image.id = "evzv-logo";
 
     // Create image element
     var imageH = document.createElement("img");
     imageH.src = "/assets/header3.jpg";
     imageH.alt = "EVZV Header";
+    imageH.id = "evzv-header";
 
     // Create paragraph element for the copyright text
     var copyrightText = document.createElement("p");
