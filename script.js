@@ -251,6 +251,11 @@ document.addEventListener("DOMContentLoaded", function () {
     image.src = "/assets/logo.png";
     image.alt = "EVZV Logo";
 
+    // Create image element
+    var imageH = document.createElement("img");
+    imageH.src = "/assets/header3.png";
+    imageH.alt = "EVZV Header";
+
     // Create paragraph element for the copyright text
     var copyrightText = document.createElement("p");
     copyrightText.textContent = "Copyright© 2023-2023 EVZV - Tamer Çevik";
@@ -259,6 +264,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Append image and text to the footer
     footer.appendChild(image);
+    footer.appendChild(imageH);
     footer.appendChild(copyrightText);
 
     // Append the footer to the body of the document
