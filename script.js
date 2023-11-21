@@ -253,7 +253,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Create image element
     var imageH = document.createElement("img");
-    imageH.src = "/assets/header3.png";
+    imageH.src = "/assets/header3.jpg";
     imageH.alt = "EVZV Header";
 
     // Create paragraph element for the copyright text
