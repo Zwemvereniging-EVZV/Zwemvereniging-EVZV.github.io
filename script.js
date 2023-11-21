@@ -58,6 +58,24 @@ function sideMenuNav() {
     openButton.style.border = "black solid 1px";
     openButton.style.cursor = "pointer";
 
+    // Nieuwe div voor de foto in het zijmenu
+    var menuFooter = document.createElement("div");
+    menuFooter.id = "menuFooter";
+    menuFooter.style.position = "absolute";
+    menuFooter.style.bottom = "30px";
+    menuFooter.style.left = "0";
+    menuFooter.style.width = "100%";
+    menuFooter.style.textAlign = "center";
+    
+    // Nieuwe afbeelding toevoegen aan het zijmenu
+    var footerImage = document.createElement("img");
+    footerImage.src = "/assets/logo.png";
+    footerImage.width = 200;
+
+    // Afbeelding aan het zijmenu toevoegen
+    menuFooter.appendChild(footerImage);
+    sideBar.appendChild(menuFooter);
+
     function adjustOpenButtonPosition() {
         if (sideBar.style.width === "275px") {
             openButton.style.left = "285px"; // 270px vanaf de linkerkant als de sideBar zichtbaar is
