@@ -98,15 +98,18 @@ img {
     }
 }
 
-* {
-    box-sizing: border-box
+@media (max-width: 600px) {
+    .image-slideshow {
+        max-width: 100%;
+    }
 }
+
 .image-slideshow {
-  max-width: 300px;
+  max-width: 500px;
   position: relative;
   margin: auto;
 }
-img {
+.image-slideshow img {
   width: 100%
 }
 .fade {
