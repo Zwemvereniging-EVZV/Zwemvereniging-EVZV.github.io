@@ -260,7 +260,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Create paragraph element for the copyright text
     var copyrightText = document.createElement("p");
-    copyrightText.textContent = "Copyright© 2023-2023 EVZV - Tamer Çevik";
+    copyrightText.textContent = "Copyright© 2023-2024 EVZV - Tamer Çevik";
     copyrightText.style.marginLeft = "15px"
     copyrightText.style.fontSize = "15px"
 
