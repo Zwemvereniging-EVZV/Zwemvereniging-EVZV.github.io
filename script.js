@@ -18,7 +18,7 @@ var buttons = [
     ]},
     { text: "Agenda", link: "/agenda" },
     { text: "Contact", link: "/contact" },
-    { text: "Inschrijven", link: "https://docs.google.com/forms/d/e/1FAIpQLSfa33H4j45KH--ZRnynB_SIxnBFdhHo8OwB4_S1mPFkn10ukw/viewform?usp=sf_link" }
+    { text: "Inschrijven", link: "https://mijn.membro.nl/aanmelden/evzv" }
 ];
 
 document.addEventListener("DOMContentLoaded", function () {
