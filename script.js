@@ -152,6 +152,15 @@ function sideMenuNav() {
     function openLink(link) {
         window.location.href = link;
     }
+
+    // Event listener om het zijmenu te sluiten wanneer er buiten wordt geklikt
+    document.addEventListener("click", function(event) {
+        if (!event.target.closest("#sidebar") && sideBar.style.width === "275px" && event.target !== openButton) {
+            sideBar.style.width = "0";
+            openButton.style.transition = "left 0.5s ease"; // Voeg een overgang toe aan de left-eigenschap
+            adjustOpenButtonPosition(); // Pas de positie van de openButton aan
+        }
+    });
 }
 
 function topBarNav() {
