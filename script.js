@@ -288,3 +288,13 @@ document.addEventListener("DOMContentLoaded", function () {
   
     gtag('config', 'G-YNJ44R3VZ9');
   })();
+
+if ('serviceWorker' in navigator) {
+	navigator.serviceWorker.register('/service-worker.js')
+		.then(function (registration) {
+			console.log('Service Worker geregistreerd met scope:', registration.scope);
+		})
+		.catch(function (error) {
+			console.error('Fout bij het registreren van de Service Worker:', error);
+		});
+}
