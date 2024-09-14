@@ -1,21 +1,25 @@
 var buttons = [
     { text: "Home", link: "/" },
-    { text: "Zwemles (4)", submenu: [
-        { text: "ABC-Zwemmen", link: "/zwemles/abc-zwemmen" },
-        { text: "Zwemvaardigheid", link: "/zwemles/zwemvaardigheid" },
-        { text: "Snorkelen", link: "/zwemles/snorkelen" },
-        { text: "Trimzwemmen", link: "/zwemles/trimzwemmen" }
-    ]},
-    { text: "Info (8)", submenu: [
-        { text: "Locate/Tijden", link: "/algemene-info/locatie-tijden" },
-        { text: "Prijzen", link: "/algemene-info/prijzen" },
-        { text: "Overganseisen", link: "/algemene-info/overgangseisen" },
-        { text: "Kledingeisen", link: "/algemene-info/kledingeisen" },
-        { text: "Exameneisen", link: "/algemene-info/exameneisen" },
-        { text: "Gedragscode", link: "/algemene-info/gedragscode" },
-        { text: "Het Team", link: "/algemene-info/het-team" },
-        { text: "Help Ons", link: "/algemene-info/help-ons" },
-    ]},
+    {
+        text: "Zwemles (4)", submenu: [
+            { text: "ABC-Zwemmen", link: "/zwemles/abc-zwemmen" },
+            { text: "Zwemvaardigheid", link: "/zwemles/zwemvaardigheid" },
+            { text: "Snorkelen", link: "/zwemles/snorkelen" },
+            { text: "Trimzwemmen", link: "/zwemles/trimzwemmen" }
+        ]
+    },
+    {
+        text: "Info (8)", submenu: [
+            { text: "Locate/Tijden", link: "/algemene-info/locatie-tijden" },
+            { text: "Prijzen", link: "/algemene-info/prijzen" },
+            { text: "Overganseisen", link: "/algemene-info/overgangseisen" },
+            { text: "Kledingeisen", link: "/algemene-info/kledingeisen" },
+            { text: "Exameneisen", link: "/algemene-info/exameneisen" },
+            { text: "Gedragscode", link: "/algemene-info/gedragscode" },
+            { text: "Het Team", link: "/algemene-info/het-team" },
+            { text: "Help Ons", link: "/algemene-info/help-ons" },
+        ]
+    },
     { text: "Agenda", link: "/agenda" },
     { text: "Contact", link: "/contact" },
     { text: "Inschrijven", link: "https://mijn.membro.nl/aanmelden/evzv" }
@@ -27,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
         sideMenuNav();
     }
-    
+
 });
 
 function sideMenuNav() {
@@ -66,7 +70,7 @@ function sideMenuNav() {
     menuFooter.style.left = "0";
     menuFooter.style.width = "100%";
     menuFooter.style.textAlign = "center";
-    
+
     // Nieuwe afbeelding toevoegen aan het zijmenu
     var footerImage = document.createElement("img");
     footerImage.src = "/assets/logo.png";
@@ -83,7 +87,7 @@ function sideMenuNav() {
             openButton.style.left = "10px"; // 20px vanaf de linkerkant als de sideBar niet zichtbaar is
         }
     }
-    
+
     openButton.addEventListener("click", function () {
         if (sideBar.style.width === "275px") {
             sideBar.style.width = "0";
@@ -94,7 +98,7 @@ function sideMenuNav() {
         }
         adjustOpenButtonPosition(); // Pas de positie van de openButton aan bij het openen/sluiten van de sideBar
     });
-    
+
     // Voeg een event listener toe om de overgang te resetten wanneer deze is voltooid
     openButton.addEventListener("transitionend", function () {
         openButton.style.transition = ""; // Reset de overgang
@@ -112,7 +116,7 @@ function sideMenuNav() {
         button.style.textDecoration = "none";
         button.style.color = "#fff";
         button.textContent = buttonInfo.text;
-    
+
         if (buttonInfo.link) {
             button.href = buttonInfo.link;
             button.addEventListener("click", function (event) {
@@ -124,7 +128,7 @@ function sideMenuNav() {
             var submenu = document.createElement("div");
             submenu.className = "submenu";
             button.appendChild(submenu);
-        
+
             button.addEventListener("mouseover", function () {
                 submenu.style.display = "block";
                 submenu.style.left = "75px";
@@ -132,11 +136,11 @@ function sideMenuNav() {
                 submenu.style.transform = "translateY(10px)";
                 submenu.style.wordWrap = "break-word";
             });
-        
+
             button.addEventListener("mouseout", function () {
                 submenu.style.display = "none";
             });
-        
+
             buttonInfo.submenu.forEach(function (submenuItem) {
                 var submenuLink = document.createElement("a");
                 submenuLink.textContent = submenuItem.text;
@@ -145,7 +149,7 @@ function sideMenuNav() {
                 submenu.appendChild(submenuLink);
             });
         }
-    
+
         sideBar.appendChild(button);
     });
 
@@ -154,7 +158,7 @@ function sideMenuNav() {
     }
 
     // Event listener om het zijmenu te sluiten wanneer er buiten wordt geklikt
-    document.addEventListener("click", function(event) {
+    document.addEventListener("click", function (event) {
         if (!event.target.closest("#sidebar") && sideBar.style.width === "275px" && event.target !== openButton) {
             sideBar.style.width = "0";
             openButton.style.transition = "left 0.5s ease"; // Voeg een overgang toe aan de left-eigenschap
@@ -226,24 +230,32 @@ document.addEventListener("DOMContentLoaded", function () {
     function displayImages() {
         let i;
         const images = document.getElementsByClassName("image");
-        for (i = 0; i < images.length; i++) {
-          images[i].style.display = "none";
+
+        if (images.length === 0) {
+            console.warn("Geen afbeeldingen gevonden met de class 'image'.");
+            return; // Stop de functie als er geen afbeeldingen zijn.
         }
+
+        for (i = 0; i < images.length; i++) {
+            images[i].style.display = "none";
+        }
+
         index++;
         if (index > images.length) {
-          index = 1;
+            index = 1;
         }
-        images[index-1].style.display = "block";
-        setTimeout(displayImages, 3000); 
+
+        images[index - 1].style.display = "block";
+        setTimeout(displayImages, 3000);
     }
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const facebookIcon = document.createElement("img");
     facebookIcon.src = "https://www.facebook.com/images/fb_icon_325x325.png";
     facebookIcon.alt = "Facebook Icon";
     facebookIcon.id = "facebookIcon";
-    facebookIcon.addEventListener("click", function() {
+    facebookIcon.addEventListener("click", function () {
         window.open("https://www.facebook.com/EersteVoorschotenseZwemvereniging/?fref=ts");
     });
 
@@ -283,27 +295,27 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /* google analytics */
-(function() {
+(function () {
     var script = document.createElement('script');
     script.async = true;
     script.src = 'https://www.googletagmanager.com/gtag/js?id=G-YNJ44R3VZ9';
-  
+
     var firstScript = document.getElementsByTagName('script')[0];
     firstScript.parentNode.insertBefore(script, firstScript);
-  
+
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-  
+
     gtag('config', 'G-YNJ44R3VZ9');
-  })();
+})();
 
 if ('serviceWorker' in navigator) {
-	navigator.serviceWorker.register('/service-worker.js')
-		.then(function (registration) {
-			console.log('Service Worker geregistreerd met scope:', registration.scope);
-		})
-		.catch(function (error) {
-			console.error('Fout bij het registreren van de Service Worker:', error);
-		});
+    navigator.serviceWorker.register('/service-worker.js')
+        .then(function (registration) {
+            console.log('Service Worker geregistreerd met scope:', registration.scope);
+        })
+        .catch(function (error) {
+            console.error('Fout bij het registreren van de Service Worker:', error);
+        });
 }
