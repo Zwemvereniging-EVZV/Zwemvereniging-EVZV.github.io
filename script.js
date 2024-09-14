@@ -75,6 +75,7 @@ function sideMenuNav() {
     var footerImage = document.createElement("img");
     footerImage.src = "/assets/logo.png";
     footerImage.width = 200;
+    footerImage.alt = "Logo";
 
     // Afbeelding aan het zijmenu toevoegen
     menuFooter.appendChild(footerImage);
