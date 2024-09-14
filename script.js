@@ -111,6 +111,8 @@ function sideMenuNav() {
     buttons.forEach(function (buttonInfo) {
         var button = document.createElement("a");
         button.className = "sidebarButton";
+        button.rel = "nofollow"
+        button.href = "#"
         button.style.display = "block";
         button.style.cursor = "pointer";
         button.style.padding = "10px";
