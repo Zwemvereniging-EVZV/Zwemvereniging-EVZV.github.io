@@ -115,7 +115,7 @@ function sideMenuNav() {
         button.href = "#"
         button.style.display = "block";
         button.style.cursor = "pointer";
-        button.style.padding = "10px";
+        button.style.padding = "20px";
         button.style.textDecoration = "none";
         button.style.color = "#fff";
         button.textContent = buttonInfo.text;
@@ -189,6 +189,7 @@ function topBarNav() {
         var button = document.createElement("a");
         button.className = "navbarButton";
         button.style.marginRight = "10px";
+        button.href = "#"
         button.style.cursor = "pointer";
         button.textContent = buttonInfo.text;
 
